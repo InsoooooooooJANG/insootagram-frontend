@@ -6,7 +6,7 @@ import Client from "./Apollo/Client";
 
 ReactDOM.render(
   <ApolloProvider client={Client}>
-    <App /><App />
+    <App/>
   </ApolloProvider>,
   document.getElementById('root')
 );
