@@ -1,13 +1,15 @@
+import GlobalStyles from "../Styles/GlobalStyles";
+import Theme from "../Styles/Theme";
+import AppRouter from "./Router";
+import Footer from "./Footer";
 import { ApolloClient } from "apollo-boost";
 import React from "react";
 import {gql} from "apollo-boost";
 import {ApolloProvider, useQuery} from "react-apollo-hooks";
 import { Router } from "react-router-dom";
 import styled, {ThemeProvider} from "styled-components";
-import GlobalStyles from "../Styles/GlobalStyles";
-import Theme from "../Styles/Theme";
-import AppRouter from "./Router";
-import Footer from "./Footer";
+import {ToastContainer, toast} from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // query를 서버에게 요청하는 게 아니라 client에 요청
 const QUERY = gql `
@@ -31,6 +33,7 @@ export default () => {
       <GlobalStyles/>
       <AppRouter isLoggedIn={isLoggedIn}/>
       <Footer></Footer>
+      <ToastContainer position={toast.POSITION.BOTTOM_LEFT} />
     </Wrapper>
     </ThemeProvider>
   );
