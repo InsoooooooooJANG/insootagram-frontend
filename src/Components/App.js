@@ -1,8 +1,8 @@
 import GlobalStyles from "../Styles/GlobalStyles";
 import { HashRouter as Router } from "react-router-dom";
 import Theme from "../Styles/Theme";
-import AppRouter from "./Router";
-import Routes from "./Router";
+import AppRouter from "./Routes";
+import Routes from "./Routes";
 import Footer from "./Footer";
 import Header from "./Header";
 import { ApolloClient } from "apollo-boost";
